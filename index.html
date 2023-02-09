@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+    <main>
+        <h1 class="logo"><img src="imagenes/Logo1x.png" alt="Logo de Alura"></h1>   
+        
+        <form class="input">
+            <textarea id="textToEncript" name="textToEncript" cols="30" rows="10" placeholder="Introduzca el texto aquí"
+                onkeypress="return (!((event.charCode >= 65 && event.charCode <= 90) || event.charCode == 96 || (event.charCode >= 128 && event.charCode <= 154 ) || (event.charCode >= 160 && event.charCode <= 163) || (event.charCode >= 181 && event.charCode <= 183) || (event.charCode >= 198 && event.charCode <= 199) || (event.charCode >= 210 && event.charCode <= 216) || (event.charCode >= 222 && event.charCode <= 299) || (event.charCode >= 233 && event.charCode <= 235) || event.charCode == 196 || event.charCode == 203 || event.charCode == 207 || event.charCode == 214 || event.charCode == 220 || event.charCode == 239))"></textarea>
+            <div class="advertencia">
+                <img src="imagenes/bi_exclamation-circle-fill.png" alt="imagen de exclamación">
+                <P>Solo letras minúsculas sin acentos</P>
+            </div>
+            <div class="panel-de-botones">
+                <button id="botonEncriptar" class="botones">Encriptar</button>
+                <button id="botonDesencriptar" class="botones">Desencriptar</button>
+            </div>
+        </form>
+
+
+        <section class="display">
+            <div id="rectangulo-sin-texto" class="container">
+                <img id="munheco" src="imagenes/Muñeco.svg" alt="imagen de advertencia">
+                <div class="cuadro-de-texto">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+
+            </div>
+
+            <div id="rectangulo-con-texto" class="container">
+                <h2></h2>
+                <textarea readonly id="textToDisplay"></textarea>
+                <button id="btnCopy" class="botones">Copiar</button>
+                
+
+            </div>
+        </section>      
+    </main>
+    <footer>
+        <div class="flex-container">
+            <h2>Social Media</h2>
+            <div class="container-social-media">
+                <a class="social-media-links" href="http://"><img src="imagenes/github.png" alt="link to Github"></a>       
+                <a class="social-media-links" href="http://"><img src="imagenes/linkedin.png" alt="link to linkedin"></a>
+                <a class="social-media-links" href="http://"><img src="imagenes/twitter.png" alt="link to twitter"></a>
+            </div>        
+            <p class="copyright">&copy Copyright 2022</p>
+        </div>       
+    </footer>
+    <script src="js/code.js"></script>
+</body>
+
+</html>
+
+
